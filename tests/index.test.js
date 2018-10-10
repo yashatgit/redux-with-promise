@@ -38,4 +38,27 @@ describe('Action creators', () => {
     const actions = store.getActions();
     expect(actions.length).toEqual(2)
   });
+
+  xtest('should dispatch "successType" action type (if provided) if promise is resolved', done => {
+    const asyncDataLoader = new Promise((resolve, reject) => {
+    });
+    store.dispatch({
+      type: 'USERS_FETCH',
+      promise: asyncDataLoader,
+    });
+    expect(store.getState()).toEqual({ busy: true });
+    done();
+  });
+  xtest('should dispatch "rejectType" action type (if provided) if promise is rejected', () => {
+  });
+
+  xtest('should dispatch busy:true if promise has not been resolved', () => {
+  });
+  xtest('should dispatch busy:false if promise has been resolved or rejected', () => {
+  });
+
+  xtest('should dispatch action with correct payload if promise resolves', () => {
+  });
+  xtest('should dispatch action with error if promise is rejected', () => {
+  });
 });
