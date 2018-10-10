@@ -1,0 +1,53 @@
+{
+  "name": "redux-with-promise",
+  "version": "1.0.0",
+  "description": "A middleware for redux to handle promised based async actions.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "check-coverage": "istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "babel --out-dir dist --ignore *.test.js,./src/test/* src",
+    "prebuild": "rimraf dist"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint-plugin-jest": "^21.5.0",
+    "jest": "^23.6.0",
+    "redux": "^4.0.0",
+    "redux-mock-store": "^1.3.0",
+    "redux-thunk": "^2.2.0",
+    "regenerator-runtime": "^0.12.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^4.3.1",
+    "watch": "^1.0.2"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashatgit/redux-with-promise.git"
+  },
+  "keywords": [
+    "redux",
+    "async",
+    "promise",
+    "middleware",
+    "thunk"
+  ],
+  "author": "Yash Soni <mailme.developer@yashsoni.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yashatgit/redux-with-promise/issues"
+  },
+  "homepage": "https://github.com/yashatgit/redux-with-promise#readme"
+}
